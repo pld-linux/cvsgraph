@@ -1,17 +1,20 @@
 Summary:	Create graphs of branches and revisions for files in a CVS repository
 Summary(pl):	Tworzenie grafów rozga³êzieñ i rewizji dla plików w repozytorium CVS
 Name:		cvsgraph
-Version:	1.4.0
+Version:	1.4.1
 Release:	1
 License:	GPL
 Group:		Applications/Publishing
 Source0:	http://www.akhphd.au.dk/~bertho/cvsgraph/release/%{name}-%{version}.tar.gz
-# Source0-md5:	706f0af002424712feb5b8c8406dcce8
+# Source0-md5:	ed3ce864699c66995504f10ef7bbef08
 URL:		http://www.akhphd.au.dk/~bertho/cvsgraph/
 BuildRequires:	bison
 BuildRequires:	flex
-BuildRequires:	gd-devel
+BuildRequires:	gd-devel >= 2.0.28
+Requires:	gd >= 2.0.28
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+
+%define		_sysconfdir	/etc/%{name}
 
 %description
 CvsGraph is a utility to make a graphical representation of all
@@ -29,16 +32,16 @@ samodzielnej wersji tego kodu, uzna³, ¿e czas tak± napisaæ.
 %setup -q
 
 %build
-%configure2_13 \
-	--sysconfdir=%{_sysconfdir}/%{name}
+%configure
+
 %{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d -m 755 $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man{1,5},%{_sysconfdir}/%{name}}
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man{1,5},%{_sysconfdir}}
 
-install -m 755 %{name} $RPM_BUILD_ROOT%{_bindir}
-install %{name}.conf $RPM_BUILD_ROOT%{_sysconfdir}/%{name}
+install %{name} $RPM_BUILD_ROOT%{_bindir}
+install %{name}.conf $RPM_BUILD_ROOT%{_sysconfdir}
 install %{name}.1 $RPM_BUILD_ROOT%{_mandir}/man1
 install %{name}.conf.5 $RPM_BUILD_ROOT%{_mandir}/man5
 
@@ -50,5 +53,5 @@ rm -rf $RPM_BUILD_ROOT
 %doc ChangeLog README cvsgraphwrapper.php3 mkimage.php3
 %attr(755,root,root) %{_bindir}/%{name}
 %{_mandir}/man?/*
-%dir %{_sysconfdir}/%{name}
-%config(noreplace) %verify(not md5 size mtime) %{_sysconfdir}/%{name}/%{name}.conf
+%dir %{_sysconfdir}
+%config(noreplace) %verify(not md5 size mtime) %{_sysconfdir}/%{name}.conf
