@@ -11,7 +11,7 @@ URL:		http://www.akhphd.au.dk/~bertho/cvsgraph/
 BuildRequires:	bison
 BuildRequires:	flex
 BuildRequires:	gd-devel
-BuildRoot:      %{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 CvsGraph is a utility to make a graphical representation of all
