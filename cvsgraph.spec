@@ -7,7 +7,9 @@ License:	GPL
 Group:		Applications/Publishing
 Source0:	http://www.akhphd.au.dk/~bertho/cvsgraph/release/%{name}-%{version}.tar.gz
 # Source0-md5:	4b3e7d0ac09222407c1357bb348869a2
+Patch0:		%{name}-config.patch
 URL:		http://www.akhphd.au.dk/~bertho/cvsgraph/
+BuildRequires:	autoconf	
 BuildRequires:	bison
 BuildRequires:	flex
 BuildRequires:	gd-devel >= 2.0.28
@@ -30,8 +32,10 @@ samodzielnej wersji tego kodu, uzna³, ¿e czas tak± napisaæ.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
+%{__autoconf}
 %configure
 
 %{__make}
