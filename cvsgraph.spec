@@ -6,6 +6,7 @@ Release:	1
 License:	GPL
 Group:		Applications/Publishing
 Source0:	http://www.akhphd.au.dk/~bertho/cvsgraph/release/%{name}-%{version}.tar.gz
+# Source0-md5:	cc26eea4071631e1b6c98157c5459b53
 URL:		http://www.akhphd.au.dk/~bertho/cvsgraph/
 BuildRequires:	bison
 BuildRequires:	flex
