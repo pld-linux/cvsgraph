@@ -1,12 +1,12 @@
 Summary:	Create graphs of branches and revisions for files in a CVS repository
 Summary(pl):	Tworzenie grafów rozga³êzieñ i rewizji dla plików w repozytorium CVS
 Name:		cvsgraph
-Version:	1.5.1
+Version:	1.5.2
 Release:	1
 License:	GPL
 Group:		Applications/Publishing
 Source0:	http://www.akhphd.au.dk/~bertho/cvsgraph/release/%{name}-%{version}.tar.gz
-# Source0-md5:	2f01dc06685581ac03bac38e08bf3b29
+# Source0-md5:	095a779d7977ae0c12f456ed119af6f6
 Patch0:		%{name}-config.patch
 URL:		http://www.akhphd.au.dk/~bertho/cvsgraph/
 BuildRequires:	autoconf	
