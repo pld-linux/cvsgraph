@@ -9,7 +9,7 @@ Source0:	http://www.akhphd.au.dk/~bertho/cvsgraph/release/%{name}-%{version}.tar
 # Source0-md5:	d8919dc9617ab4cf8bf658b7fbd1df0e
 Patch0:		%{name}-config.patch
 URL:		http://www.akhphd.au.dk/~bertho/cvsgraph/
-BuildRequires:	autoconf	
+BuildRequires:	autoconf
 BuildRequires:	bison
 BuildRequires:	flex
 BuildRequires:	gd-devel >= 2.0.28
