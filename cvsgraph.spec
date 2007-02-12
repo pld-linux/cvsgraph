@@ -1,5 +1,5 @@
 Summary:	Create graphs of branches and revisions for files in a CVS repository
-Summary(pl):	Tworzenie grafów rozga³êzieñ i rewizji dla plików w repozytorium CVS
+Summary(pl.UTF-8):   Tworzenie grafÃ³w rozgaÅ‚Ä™zieÅ„ i rewizji dla plikÃ³w w repozytorium CVS
 Name:		cvsgraph
 Version:	1.6.1
 Release:	1
@@ -24,11 +24,11 @@ revisions and branches of a file in a CVS/RCS repository. It has been
 inspired by the 'graph' option in WinCVS, but I could not find a
 stand-alone version of this graph code. So, it was time to write one.
 
-%description -l pl
-CvsGraph to narzêdzie do tworzenia graficznej reprezentacji wszystkich
-rewizji i rozga³êzieñ pliku w repozytorium CVS/RCS. Jest zainspirowane
-opcj± 'graph' w programie WinCVS - poniewa¿ autor nie móg³ znale¼æ
-samodzielnej wersji tego kodu, uzna³, ¿e czas tak± napisaæ.
+%description -l pl.UTF-8
+CvsGraph to narzÄ™dzie do tworzenia graficznej reprezentacji wszystkich
+rewizji i rozgaÅ‚Ä™zieÅ„ pliku w repozytorium CVS/RCS. Jest zainspirowane
+opcjÄ… 'graph' w programie WinCVS - poniewaÅ¼ autor nie mÃ³gÅ‚ znaleÅºÄ‡
+samodzielnej wersji tego kodu, uznaÅ‚, Å¼e czas takÄ… napisaÄ‡.
 
 %prep
 %setup -q
