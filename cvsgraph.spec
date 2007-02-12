@@ -1,5 +1,5 @@
 Summary:	Create graphs of branches and revisions for files in a CVS repository
-Summary(pl.UTF-8):   Tworzenie grafów rozgałęzień i rewizji dla plików w repozytorium CVS
+Summary(pl.UTF-8):	Tworzenie grafów rozgałęzień i rewizji dla plików w repozytorium CVS
 Name:		cvsgraph
 Version:	1.6.1
 Release:	1
