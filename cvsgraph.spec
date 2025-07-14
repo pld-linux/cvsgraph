@@ -32,7 +32,7 @@ samodzielnej wersji tego kodu, uznał, że czas taką napisać.
 
 %prep
 %setup -q
-%patch0 -p1
+%patch -P0 -p1
 
 %build
 %{__aclocal}
