@@ -1,0 +1,12 @@
+# configure.ac replaced CFLAGS with the freetype flags, dropping user CFLAGS
+--- cvsgraph-1.7.2.orig/configure.ac	2021-05-13 08:46:45.000000000 +0200
++++ cvsgraph-1.7.2/configure.ac	2026-11-21 23:44:22.412840573 +0100
+@@ -31,7 +31,7 @@
+ 
+ PKG_CHECK_MODULES([FT2], [freetype2])
+ LIBS="${FT2_LIBS} ${LIBS}"
+-CFLAGS="${FT2_CFLAGS} ${GD_CFLAGS}"
++CFLAGS="${FT2_CFLAGS} ${CFLAGS}"
+ 
+ # find out what the GD library uses
+ #AX_CHECK_GD

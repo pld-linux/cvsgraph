@@ -1,18 +1,22 @@
 Summary:	Create graphs of branches and revisions for files in a CVS repository
 Summary(pl.UTF-8):	Tworzenie grafów rozgałęzień i rewizji dla plików w repozytorium CVS
 Name:		cvsgraph
-Version:	1.7.0
-Release:	5
+Version:	1.7.2
+Release:	1
 License:	GPL
 Group:		Applications/Publishing
-Source0:	http://www.akhphd.au.dk/~bertho/cvsgraph/release/%{name}-%{version}.tar.gz
-# Source0-md5:	8194c0c6f6837fcfa3ad0fab5dfc0597
+Source0:	https://www.vagrearg.org/cvsgraph/release/%{name}-%{version}.tar.gz
+# Source0-md5:	21bf0575f88d166cfddd5d91bd1ef6f2
 Patch0:		%{name}-config.patch
-URL:		http://www.akhphd.au.dk/~bertho/cvsgraph/
+Patch1:		%{name}-cflags.patch
+URL:		https://www.vagrearg.org/content/cvsgraph
 BuildRequires:	autoconf
+BuildRequires:	automake
 BuildRequires:	bison
 BuildRequires:	flex
+BuildRequires:	freetype-devel
 BuildRequires:	gd-devel >= 2.0.28
+BuildRequires:	pkgconfig
 Requires:	gd >= 2.0.28
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -33,6 +37,7 @@ samodzielnej wersji tego kodu, uznał, że czas taką napisać.
 %prep
 %setup -q
 %patch -P0 -p1
+%patch -P1 -p1
 
 %build
 %{__aclocal}
